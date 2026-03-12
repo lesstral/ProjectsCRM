@@ -1,0 +1,27 @@
+.dockerignore
+*.env
+!.env.example
+.git
+.gitignore
+.vs
+.vscode
+.idea
+docker-compose.yml
+docker-compose.*.yml
+*/bin
+*/obj
+Thumbs.db
+*.log
+.DS_Store
+
+node_modules/
+*/appsettings.*.json
+# .NET
+**/bin/
+**/obj/
+dist/
+out/
+
+
+
+
