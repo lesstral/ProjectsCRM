@@ -1,7 +1,3 @@
-
-
-
-
 using Testcontainers.PostgreSql;
 
 namespace IntegrationTests;

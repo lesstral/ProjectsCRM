@@ -2,8 +2,14 @@
   <Project Path="src/ApplicationCore/ApplicationCore.csproj" />
   <Project Path="src/Infrastructure/Infrastructure.csproj" />
   <Project Path="src/Web/Web.csproj" />
-  <Project Path="tests/ApplicationCore.UnitTests/ApplicationCore.UnitTests.csproj" Id="3f6e109f-f012-46c4-968f-01552c6e29a0" />
-  <Project Path="tests/IntegrationTests/IntegrationTests.csproj" Id="16294f2c-45b8-4a87-908b-4dc476fed9e3">
+  <Project
+    Path="tests/ApplicationCore.UnitTests/ApplicationCore.UnitTests.csproj"
+    Id="3f6e109f-f012-46c4-968f-01552c6e29a0"
+  />
+  <Project
+    Path="tests/IntegrationTests/IntegrationTests.csproj"
+    Id="16294f2c-45b8-4a87-908b-4dc476fed9e3"
+  >
     <BuildDependency Project="src/Web/Web.csproj" />
   </Project>
 </Solution>
