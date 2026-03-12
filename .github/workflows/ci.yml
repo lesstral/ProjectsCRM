@@ -38,11 +38,11 @@ jobs:
       - name: Build
         run: dotnet build --no-restore --configuration Release
 
-      - name: Run tests
-        run: dotnet test ../../tests --configuration Release --logger "trx;LogFileName=test_results.trx" --results-directory ./TestResults
-      
-      - name: List TestResults
-        run: ls -R ./TestResults || echo "No results found"
+      - name: Run tests 
+        run: |
+              dotnet test ../../tests/ApplicationCore.UnitTests/ --configuration Release --logger "trx;LogFileName=test_results.trx" --results-directory ../../TestResults
+              dotnet test ../../tests/ApplicationCore.IntegrationTests/ --configuration Release --logger "trx;LogFileName=test_results.trx" --results-directory ../../TestResults
+
       
       - name: Upload test results
         if: always()
