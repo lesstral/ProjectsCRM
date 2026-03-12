@@ -39,8 +39,11 @@ jobs:
         run: dotnet build --no-restore --configuration Release
 
       - name: Run tests
-        run: dotnet test ../../tests --configuration Release --logger "trx"
-
+        run: dotnet test ../../tests --configuration Release --logger "trx;LogFileName=test_results.trx" --results-directory ./TestResults
+      
+      - name: List TestResults
+        run: ls -R ./TestResults || echo "No results found"
+      
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v4
