@@ -41,7 +41,7 @@ jobs:
       - name: Run tests 
         run: |
               dotnet test ../../tests/ApplicationCore.UnitTests/ --configuration Release --logger "trx;LogFileName=test_results.trx" --results-directory ../../TestResults
-              dotnet test ../../tests/ApplicationCore.IntegrationTests/ --configuration Release --logger "trx;LogFileName=test_results.trx" --results-directory ../../TestResults
+              dotnet test ../../tests/IntegrationTests/ --configuration Release --logger "trx;LogFileName=test_results.trx" --results-directory ../../TestResults
 
       
       - name: Upload test results
